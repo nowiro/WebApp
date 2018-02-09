@@ -1,0 +1,159 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin-ext');
+
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "bootstrap/variables.less";
+
+
+@gray-base: #000;
+@gray-darker: lighten(@gray-base, 13.5%); // #222
+@gray-dark: lighten(@gray-base, 20%); // #333
+@gray: lighten(@gray-base, 33.5%); // #555
+@gray-light: lighten(@gray-base, 46.7%); // #777
+@gray-lighter: lighten(@gray-base, 93.5%); // #eee
+
+@brand-main: #c40000;
+
+@brand-primary: #005cc4; //darken(#428bca, 6.5%); // #337ab7
+@brand-success: #3e991c;
+@brand-info: #5a8eca;
+@brand-warning: #ff7800;
+@brand-danger: @brand-main;
+
+@text-color: @gray-dark;
+
+@link-color: darken(@brand-primary, 0%);
+@link-hover-color: darken(@link-color, 15%);
+@link-hover-decoration: underline;
+
+@exposure-status-text-color: #808080;
+@exposure-status-high-color: #E2001A;
+@exposure-status-moderate-color: #F58523;
+@exposure-status-low-color: #FFD90D;
+@exposure-status-negligible-color: #3DB049;
+@exposure-status-na-color: #bbb;
+
+@font-family-sans-serif: "Lato", Helvetica, Arial, sans-serif;
+@font-family-sans-serif-medium: "Lato", Helvetica, Arial, sans-serif;
+@font-family-sans-serif-bold: "Lato", Helvetica, Arial, sans-serif;
+@font-family-sans-serif-light: "Lato", Helvetica, Arial, sans-serif;
+@font-family-serif: Georgia, "Times New Roman", Times, serif;
+@font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base: @font-family-sans-serif;
+
+@border-radius-base: 2px;
+@border-radius-large: 3px;
+@border-radius-small: 1px;
+
+
+@modal-backdrop-bg: #fff;
+@modal-backdrop-opacity: .95;
+@modal-header-border-color: #2d2d2d;
+@modal-footer-border-color: #e5e5e5; //@modal-header-border-color;
+
+
+@third-level-color-1: #948a54;
+@third-level-color-2: #f79c51;
+@third-level-color-3: #00b0f0;
+@third-level-color-4: #c0504d;
+@third-level-color-5: #9bbb59;
+@third-level-color-6: #1f497d;
+@third-level-color-7: #7d451f;
+@third-level-color-8: #5ee08c;
+@third-level-color-9: #603294;
+@third-level-color-10: #b2428e;
+
+@third-backlevel-color-1: rgba(212, 201, 148, 0.46);
+@third-backlevel-color-2: rgba(255, 231, 211, 0.54);
+@third-backlevel-color-3: rgba(201, 238, 251, 0.33);
+@third-backlevel-color-4: rgba(249, 219, 219, 0.37);
+@third-backlevel-color-5: rgba(239, 249, 219, 0.66);
+@third-backlevel-color-6: rgba(201, 221, 245, 0.53);
+@third-backlevel-color-7: rgba(245, 210, 186, 0.53);
+@third-backlevel-color-8: rgba(222, 255, 234, 0.66);
+@third-backlevel-color-9: rgba(233, 220, 247, 0.53);
+@third-backlevel-color-10: rgba(255, 229, 247, 0.46);
+
+
+@import "bootstrap/mixins.less";
+
+// Reset and dependencies
+@import "bootstrap/normalize.less";
+@import "bootstrap/print.less";
+//@import "bootstrap/glyphicons.less";
+
+// Core CSS
+@import "bootstrap/scaffolding.less";
+@import "bootstrap/type.less";
+@import "bootstrap/code.less";
+@import "bootstrap/grid.less";
+@import "bootstrap/tables.less";
+@import "bootstrap/forms.less";
+@import "bootstrap/buttons.less";
+
+// Components
+@import "bootstrap/component-animations.less";
+@import "bootstrap/dropdowns.less";
+@import "bootstrap/button-groups.less";
+@import "bootstrap/input-groups.less";
+@import "bootstrap/navs.less";
+@import "bootstrap/navbar.less";
+@import "bootstrap/breadcrumbs.less";
+@import "bootstrap/pagination.less";
+@import "bootstrap/pager.less";
+@import "bootstrap/labels.less";
+@import "bootstrap/badges.less";
+@import "bootstrap/jumbotron.less";
+@import "bootstrap/thumbnails.less";
+@import "bootstrap/alerts.less";
+@import "bootstrap/progress-bars.less";
+@import "bootstrap/media.less";
+@import "bootstrap/list-group.less";
+@import "bootstrap/panels.less";
+@import "bootstrap/responsive-embed.less";
+@import "bootstrap/wells.less";
+@import "bootstrap/close.less";
+
+// Components w/ JavaScript
+@import "bootstrap/modals.less";
+@import "bootstrap/tooltip.less";
+@import "bootstrap/popovers.less";
+@import "bootstrap/carousel.less";
+
+// Utility classes
+@import "bootstrap/utilities.less";
+@import "bootstrap/responsive-utilities.less";
+
+
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@import "fontawesome/variables.less";
+@import "fontawesome/mixins.less";
+@import "fontawesome/path.less";
+@import "fontawesome/core.less";
+@import "fontawesome/larger.less";
+@import "fontawesome/fixed-width.less";
+@import "fontawesome/list.less";
+@import "fontawesome/bordered-pulled.less";
+@import "fontawesome/animated.less";
+@import "fontawesome/rotated-flipped.less";
+@import "fontawesome/stacked.less";
+@import "fontawesome/icons.less";
+@import "fontawesome/screen-reader.less";
+
+
+
+
+// --------------- Custom style for Layout
+@import "Views/Shared/animate.less";
+
+@import "Views/Home/Index.less";

@@ -1,0 +1,94 @@
+﻿<article>
+    <h1 class="h3">Step 4: Content from Template.html with Processing, Filtering and Ajax Call</h1>
+
+    <div class="data-container">
+        <data-loading></data-loading>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="search">Search</label>
+                    <input data-ng-model="searchValue" data-ng-change="search()" id="search" class="form-control" placeholder="Filter text">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="pageSize">Page size</label>
+                    <select data-ng-model="pageSizeValue" data-ng-change="pageSize()" id="pageSize" class="form-control"
+                        data-ng-options="size as size for size in pageSizeOptions" 
+                        data-ng-init="pageSizeValue = pageSizeOptions[0]">
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="sortBy">Order by</label>
+                    <select data-ng-model="sortByValue" data-ng-change="sortBy()" id="sortBy" class="form-control"
+                        data-ng-options="option as option for option in sortByOptions" 
+                        data-ng-init="sortByValue = sortByOptions[0]">
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="sortDirection">Sort direction</label>
+                    <select data-ng-model="sortDirectionValue" data-ng-change="sortDirection()" id="sortDirection" class="form-control"
+                        data-ng-options="direction.value as direction.name for direction in sortDirectionOptions" 
+                        data-ng-init="sortDirectionValue = sortDirectionOptions[0].name">
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <nav class="row" aria-label="Page navigation">
+            <div class="col-sm-9">
+                <ul class="pagination" style="vertical-align: middle; margin-right: 5px;">
+                    <li data-ng-if="data.Info.Page > 1 && currentPage > 1">
+                        <a href="#" aria-label="First page" data-ng-click="setPage(1)">
+                            <span aria-hidden="true">&laquo;&laquo;</span>
+                        </a>
+                    </li>
+                    <li data-ng-if="data.Info.Page > 1 && currentPage > 1">
+                        <a href="#" aria-label="Previous" data-ng-click="prevPage()">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    <li data-ng-repeat="n in [] | paginationRange:data.Info.Page:data.Info.PageCount"
+                        data-ng-class="{active: n == data.Info.Page}">
+                        <a href="#" data-ng-disabled="n == data.Info.Page" data-ng-click="setPage(n)">{{n}}</a>
+                    </li>
+
+                    <li data-ng-if="(data.Info.PageCount > 1 && data.Info.PageCount > data.Info.Page) && currentPage < pageCount">
+                        <a href="#" aria-label="Next" data-ng-click="nextPage()">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    <li data-ng-if="(data.Info.PageCount > 1 && data.Info.PageCount > data.Info.Page) && currentPage < pageCount">
+                        <a href="#" aria-label="Last page" data-ng-click="setPage(pageCount)">
+                            <span aria-hidden="true">&raquo;&raquo;</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <div style="color: #ccc; display: inline-block; vertical-align: middle; margin: 20px 0;">Page of {{data.Info.Page}}/{{data.Info.PageCount}}</div>
+            </div>
+            <div class="col-sm-3 text-right">
+                <div class="form-inline" style="margin: 20px 0;">
+                    <div class="form-group">
+                        <label for="goToPage">Go to page</label>
+                        <input type="number" data-ng-model="goToPageValue" data-ng-change="goToPage()" id="goToPage" class="form-control" placeholder="Type page number" style="width: 70px;" min="1" max="{{data.Info.PageCount}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" style="color: #ccc;">Number of results: {{data.Info.ResultCount}}</div>
+        </nav>
+
+
+        <ul class="data-list" data-ng-if="data.Data.length > 0">
+            <li data-ng-repeat="item in data.Data">
+                <h2 class="h4">{{item.Name}}</h2>
+                <p>{{item.Description}}</p>
+            </li>
+        </ul>
+    </div>
+</article>

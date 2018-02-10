@@ -1,4 +1,4 @@
-# API & UI Frameworks comparison
+# API & UI - Comparison of JS Frameworks
 * Visual Studio 2012 for API and UI.AngularJS
 ** Ready to work on the Windows Server 2012 with IE 10 engine
 ** .NET Framework 4.5
@@ -9,7 +9,7 @@
 * ASP.NET Web API 2
 * Url: http://localhost:56011/swagger
 
-## UI.AngularJS - ASP.NET Core
+## UI.AngularJS
 * LESS suppport (without Autoprefixer - polyfill issue; works with Msie Engine >= 11)
 * Url: http://localhost:56010/
 
